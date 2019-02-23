@@ -1,0 +1,17 @@
+
+title: Australian Tech Lobby
+email: contact@techlobby.org.au
+description: >-
+  The Australian Tech Lobby is a non-profit organisation that advocates 
+  for tech workers, technology companies and the Australian tech sector as
+  a whole.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://techlobby.org.au" # the base hostname & protocol for your site, e.g. http://example.com
+
+include: ["_pages"]
+
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed

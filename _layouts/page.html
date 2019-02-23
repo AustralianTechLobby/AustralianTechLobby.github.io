@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Australian Tech Lobby</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="shortcut icon" href="/assets/logo.png" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+					<div id="logo">
+							<span class="image avatar48"><img src="/assets/logo.png" alt=""></span>
+							<h1 id="title">Australian Tech Lobby</lh1>
+					</div>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                                <li><a href="/">Home</a></li>
+                                {% for node in site.pages %}
+                                    {% if node.title %}
+                                        <li><a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/AusTechLobby" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://facebook.com/AusTechLobby" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/AustralianTechLobby" class="icon fa-github"><span class="label">Github</span></a></li>
+							<!-- Uncomment this when we have a working email address <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li> -->
+						</ul>
+					<div class="copyright">&copy; 2019 <br /> Australian Tech Lobby</div>
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+				<section id="top" class="one dark cover">
+					<div class="container">
+							{% if page.heading %}
+								<h2 class="alt">{{page.heading}}</h2>
+							{% else %}
+								<h2 class="alt">{{page.title}}</h2>
+							{% endif %}
+							{% if page.subtitle %}
+								<p>{{page.subtitle}}</p>
+							{% endif %}
+					</div>
+				</section>
+
+				<section>
+					<div class="container">
+						{{ content }}
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
