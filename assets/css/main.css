@@ -2085,7 +2085,7 @@ input, select, textarea {
 	#logo {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		flex-direction: column;
 		position: relative;
 		margin: 1.5em 0.5em;
 		min-height: 48px;
@@ -2109,9 +2109,9 @@ input, select, textarea {
 		}
 
 		#logo .image {
-			position: absolute;
 			left: 0;
 			top: 0;
+			margin-bottom: 0.5em;
 		}
 
 	#nav ul {
